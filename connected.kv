@@ -1,0 +1,60 @@
+
+<Connected>:
+
+    canvas:
+        Color:
+            rgba: 55/255, 102/255, 76/255, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+    BoxLayout:
+        id: box
+        orientation: 'vertical'
+
+        Label:
+            text: root.getMonth() + "                                        " + root.getTotalSpent()
+            font_size: 32
+            color: 109/255, 196/255, 115/255, 1
+            size: (100, 100)
+        CDropDown:
+            pos: 200, 200
+            font_size: 32
+        # Button:
+        #     text: "Disconnect"
+        #     font_size: 24
+        #     on_press: root.disconnect()
+
+<CDropDown>:
+    Button:
+        id: btn
+        text: "Press me !!"
+        size_hint: None, None
+        on_parent: drop_content.dismiss()
+        on_release: drop_content.open(self)
+
+    DropDown:
+        id: drop_content
+        on_select: btn.text = '{}'.format(args[1])
+
+        Button:
+            id: btn1
+            text: 'First Item'
+            size_hint_y: None
+            height: 35
+            on_release: drop_content.select('First Item')
+
+        Button:
+            text:"Log Expense"
+            size_hint_y: None
+            height: 44
+            #on_release: drop_content.select('NERD')
+            on_press: root.parent.parent.manager.current = 'input'
+
+
+        Button:
+            id: btn3
+            text: 'Disconnect'
+            size_hint_y: None
+            height: 35
+            on_press: root.parent.parent.manager.current = 'login'

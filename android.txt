@@ -1,0 +1,3 @@
+title=<HOU$E>
+author=<Kaise, Bella, Morgan, Franco>
+orientation=<portrait>

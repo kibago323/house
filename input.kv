@@ -1,0 +1,26 @@
+<Input>:
+    canvas:
+        Color:
+            rgba: 55/255, 102/255, 76/255, 0.5
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        id: input_layout
+        orientation: 'vertical'
+        padding: [10,50,10,50]
+        spacing: 50
+
+        expense_input: expense
+        Label:
+            text: "Log Roommate Expense:"
+            font_size: 32
+
+        TextInput:
+            id: expense
+            multiline:False
+            font_size: 28
+
+        Button:
+            text: "Submit Expense"
+            on_release: root.submit_expense()
