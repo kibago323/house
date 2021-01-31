@@ -1,1 +1,2 @@
-HOU!  Run app by using 'python test.py'
+HOU$E!  
+Run app by using 'python test.py'
