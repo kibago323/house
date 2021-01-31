@@ -127,7 +127,7 @@ ScreenManager:
             size: (100, 100)
 
         Rectangle:
-            source: 'Avatar_bella.png'
+            source: 'Avatar_franco.png'
             pos: (190, 190)
             size: (100, 100)
 
@@ -195,9 +195,9 @@ ScreenManager:
                     pos: ((85, self.pos[1]-20))
                     size: (150, 100)
 
-        MDLabel:
-            text: 'MAIN'
-            halign: 'center'
+        Image:
+            source: 'expenses.png'
+            size_hint: (1, 2)
 
         MDBottomAppBar:
             MDToolbar:
